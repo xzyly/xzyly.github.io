@@ -1,6 +1,7 @@
 ---
 title: Dilworth's theorem
 data: 2025-09-08
+slug: Dilworth's theorem
 image: OIP.jpg
 categories:
     - math
