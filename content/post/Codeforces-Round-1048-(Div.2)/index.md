@@ -1,6 +1,6 @@
 ---
 title: Codeforces Round 1048 (Div. 2)
-date: 2024-09-09
+date: 2025-09-09
 slug: Codeforces Round 1048 (Div. 2)
 image: OIP.jpg
 categories:
