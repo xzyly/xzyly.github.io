@@ -1,0 +1,32 @@
+/* 【waifu.css】 */
+#waifu-toggle {
+    ...
+    /* left: 0; */
+    right: 0;
+    /* margin-left: -100px; */
+    margin-right: -90px;
+    /* writing-mode: vertical-rl; */
+    writing-mode: vertical-lr;
+}
+
+#waifu-toggle.waifu-toggle-active {
+    /* margin-left: -50px; */
+    margin-right: -40px;
+}
+
+#waifu-toggle.waifu-toggle-active:hover {
+    /* margin-left: -30px; */
+    margin-right: -20px;
+}
+
+#waifu {
+    ...
+    /* left: 0; */
+    right: 10px;
+}
+
+#waifu-tool {
+    ...
+    /* right: -10px; */
+    margin-left: 260px;
+}
