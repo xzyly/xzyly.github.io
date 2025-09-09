@@ -1,0 +1,28 @@
+// 【Stack主题鼠标样式写法】
+// default光标图片
+body,
+html,
+.article-content img {
+  cursor: url(../mouse/default.png),
+  auto !important;
+}
+
+// pointer光标图片
+a:hover,
+button:hover,
+.copyCodeButton:hover,
+#dark-mode-toggle {
+  cursor: url(../mouse/default.png),
+  auto;
+}
+
+// text光标图片
+input:hover,
+.site-description,
+.article-subtitle,
+.article-content span,
+.article-content li,
+.article-content p {
+  cursor: url(../mouse/default.png),
+  auto;
+}
