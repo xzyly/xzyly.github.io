@@ -4,7 +4,7 @@ title: LCA(最近公共祖先)
 slug: LCA(最近公共祖先)
 image: OIP.jpg
 categories:
-    -LCA
+    - LCA
 ---
 
 这里主要分享怎么用倍增法和Tarjan来解决LCA， 这两个方法也是在工作生活中应用基本最广的。    
