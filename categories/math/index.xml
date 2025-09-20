@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Math on ziyangly</title>
+        <link>https://xzyly.github.io/categories/math/</link>
+        <description>Recent content in Math on ziyangly</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ziyangly</copyright>
+        <lastBuildDate>Mon, 08 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://xzyly.github.io/categories/math/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Dilworth&#39;s theorem</title>
+        <link>https://xzyly.github.io/p/dilworths-theorem/</link>
+        <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://xzyly.github.io/p/dilworths-theorem/</guid>
+        <description>&lt;img src="https://xzyly.github.io/p/dilworths-theorem/OIP.jpg" alt="Featured image of post Dilworth&#39;s theorem" /&gt;&lt;p&gt;在了解Dilworth&amp;rsquo;s theorem 之前，我们先了解一下偏序集（partiallly ordered set）的概念&lt;/p&gt;
+&lt;h1 id=&#34;partially-ordered-set&#34;&gt;partially ordered set
+&lt;/h1&gt;&lt;h2 id=&#34;正式定义&#34;&gt;正式定义
+&lt;/h2&gt;&lt;p&gt;一个偏序集 （通常简写为 poset） 由一个集合 P 和一个二元关系 “≤” 组成，这个关系满足以下三个性质：&lt;/p&gt;
+&lt;p&gt;自反性：对于任何元素 a ∈ P，都有 a ≤ a。&lt;/p&gt;
+&lt;p&gt;解释：任何元素自己和自己都是有关系的。这很自然，就像数字5总是等于5一样。&lt;/p&gt;
+&lt;p&gt;反对称性：如果 a ≤ b 且 b ≤ a，那么必须有 a = b。&lt;/p&gt;
+&lt;p&gt;解释：不可能有两个不同的元素互相“小于等于”对方。如果它们互相“≤”，那它们只能是同一个元素。这防止了循环比较中的歧义。&lt;/p&gt;
+&lt;p&gt;传递性：如果 a ≤ b 且 b ≤ c，那么一定有 a ≤ c。&lt;/p&gt;
+&lt;p&gt;解释：次序关系可以传递。如果A是B的上司，B是C的上司，那么A一定是C的上司。&lt;/p&gt;
+&lt;p&gt;这个“≤”关系不一定是我们熟悉的数字中的“小于等于”，它可以是任何满足上述三条规则的关系。&lt;/p&gt;
+&lt;h2 id=&#34;关键点&#34;&gt;关键点
+&lt;/h2&gt;&lt;p&gt;其实如果感觉定义不太好理解可以想象他是一个“可以比较但不必全能比较”的次序&lt;/p&gt;
+&lt;h2 id=&#34;例子&#34;&gt;例子
+&lt;/h2&gt;&lt;p&gt;集合S = {2,3,4}，我们先考虑他子集形成的集合&lt;br&gt;
+P(S) = {∅,{2},{3},{4},{2,3},{2,4},{3,4},{2,3,4}};&lt;br&gt;
+这里的排序关系中的“&amp;lt;=”其实就是集合里面的属于关系，但P(S)里面的元素
+可以用属于链接的时候他们便是可比的，否则就是不可比较的&lt;/p&gt;
+&lt;h1 id=&#34;dilworths-theorem&#34;&gt;Dilworth&amp;rsquo;s theorem
+&lt;/h1&gt;&lt;h2 id=&#34;正式定义-1&#34;&gt;正式定义
+&lt;/h2&gt;&lt;p&gt;狄尔沃斯定理亦称偏序集分解定理，是关于偏序集的极大极小的定理，该定理断言：对于任意有限偏序集，其最大反链中元素的数目必等于最小链划分中链的数目。此定理的对偶形式亦真，它断言：对于任意有限偏序集，其最长链中元素的数目必等于其最小反链划分中反链的数目，由偏序集P按如下方式产生的图G称为偏序集的可比图：G的节点集由P的元素组成，而e为G中的边，仅当e的两端点在P中是可比较的，有限全序集的可比图为完全图&lt;/p&gt;
+&lt;h2 id=&#34;关键点-1&#34;&gt;关键点
+&lt;/h2&gt;&lt;p&gt;我们先理清几个概念：&lt;br&gt;
+链: 偏序集的一个子集，其中元素可以比较&lt;br&gt;
+反链： 偏序集的一个子集，其中元素不可比较&lt;br&gt;
+Dilworth&amp;rsquo;s theorem 告诉我们覆盖全部集合的链的个数等于反链的大小&lt;/p&gt;
+&lt;h2 id=&#34;例子-1&#34;&gt;例子
+&lt;/h2&gt;&lt;p&gt;假设大学里有一些课程，并且存在选修依赖关系（学B前必须先学A，即 A ≤ B）。有些课程则没有先后顺序（比如《音乐鉴赏》和《足球理论》，它们不可比）。&lt;/p&gt;
+&lt;p&gt;反链：一堆没有任何先后顺序要求的课程（比如一堆同一级别的公共选修课）。这个集合能有多大？假设最多有 5 门这样的课。&lt;/p&gt;
+&lt;p&gt;链：一条学习路径，比如《高等数学I》→《高等数学II》→《常微分方程》。&lt;/p&gt;
+&lt;p&gt;Dilworth定理告诉我们，你至少需要 5 条不同的学习路径（链），才能覆盖所有的课程。因为那5门互不依赖的课（反链）绝对不能出现在同一条路径上，必须被分开到5条路径中去。&lt;/p&gt;
+&lt;p&gt;了解后想去练手可以尝试一下洛谷的导弹拦截（https://www.luogu.com.cn/problem/P1020）&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
