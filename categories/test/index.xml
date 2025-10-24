@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Test on ziyangly</title>
+        <link>https://xzyly.github.io/categories/test/</link>
+        <description>Recent content in Test on ziyangly</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ziyangly</copyright><atom:link href="https://xzyly.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>

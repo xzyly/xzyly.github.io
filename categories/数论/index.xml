@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>数论 on ziyangly</title>
+        <link>https://xzyly.github.io/categories/%E6%95%B0%E8%AE%BA/</link>
+        <description>Recent content in 数论 on ziyangly</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>ziyangly</copyright>
+        <lastBuildDate>Mon, 22 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://xzyly.github.io/categories/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>费马小定理求逆元</title>
+        <link>https://xzyly.github.io/p/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86%E6%B1%82%E9%80%86%E5%85%83/</link>
+        <pubDate>Mon, 22 Sep 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://xzyly.github.io/p/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86%E6%B1%82%E9%80%86%E5%85%83/</guid>
+        <description>&lt;img src="https://xzyly.github.io/p/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86%E6%B1%82%E9%80%86%E5%85%83/OIP.jpg" alt="Featured image of post 费马小定理求逆元" /&gt;&lt;h2 id=&#34;为什么要求逆元&#34;&gt;为什么要求逆元
+&lt;/h2&gt;&lt;p&gt;当我计算((a % p) (+/-/* ) (b % p)) % p的时候都可以直接这样使用，但是当我们处理除法的时候，比如((a%p)/(b%p))%p，这个方法就失效了，但在大数运算时，直接除法可能产生精度问题或溢出。&lt;/p&gt;
+&lt;h2 id=&#34;什么是费马小定理&#34;&gt;什么是费马小定理
+&lt;/h2&gt;&lt;p&gt;1.当a是p的倍数：  &lt;br&gt;
+a^p≡a(mod p)  &lt;br&gt;
+2.当a与p互质，即gcd(a, p) = 1:  &lt;br&gt;
+a^p−1≡1(mod p)&lt;/p&gt;
+&lt;h2 id=&#34;如何用费马小定理求逆元&#34;&gt;如何用费马小定理求逆元
+&lt;/h2&gt;&lt;h3 id=&#34;逆元的定义&#34;&gt;逆元的定义
+&lt;/h3&gt;&lt;p&gt;在模 p 运算中，如果存在整数 x 使得 &lt;code&gt;b × x ≡ 1 (mod p)&lt;/code&gt;，则称 x 为 b 的模 p 逆元，记作 &lt;code&gt;b⁻¹&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;除法转乘法的原理&#34;&gt;除法转乘法的原理
+&lt;/h3&gt;&lt;p&gt;在模运算中，我们定义除法为：&lt;code&gt;a/b ≡ a × b⁻¹ (mod p)&lt;/code&gt;。&lt;br&gt;
+因此，&lt;code&gt;(a/b) % p = (a × b⁻¹) % p&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;费马小定理求逆元&#34;&gt;费马小定理求逆元
+&lt;/h3&gt;&lt;p&gt;当 p 是质数且 b 与 p 互质时，由费马小定理：
+&lt;code&gt;b^(p-1) ≡ 1 (mod p)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将上式两边同时乘以 &lt;code&gt;b⁻¹&lt;/code&gt;：
+&lt;code&gt;b^(p-1) × b⁻¹ ≡ 1 × b⁻¹ (mod p)&lt;/code&gt;
+&lt;code&gt;b^(p-2) ≡ b⁻¹ (mod p)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;因此，逆元 &lt;code&gt;x = b^(p-2) % p&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;完整计算过程&#34;&gt;完整计算过程
+&lt;/h3&gt;&lt;p&gt;要求 &lt;code&gt;(a/b) % p&lt;/code&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;验证 p 是质数且 gcd(b, p) = 1&lt;/li&gt;
+&lt;li&gt;计算逆元 &lt;code&gt;x = b^(p-2) % p&lt;/code&gt;（使用快速幂）&lt;/li&gt;
+&lt;li&gt;结果 = &lt;code&gt;(a × x) % p&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;例子&#34;&gt;例子
+&lt;/h2&gt;&lt;p&gt;求4 % 5 的逆元 &lt;br&gt;
+x = 4^(5-2) = 4^3 = 64 % 5 = 4 &lt;br&gt;
+验证： (4*4)%5 = 1, 正确&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
